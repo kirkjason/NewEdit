@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+     
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="auth-form">
+  <img class="logo" src="assets\images.jpeg" alt="">
+  <ion-grid>
+    <ion-row>
+      <ion-col align-self-center>
+        <ion-button class="regbut" [routerLink]="['/registration']" expand="block" color="primary">Register</ion-button>
+        <br>
+        <span class="p">or Already a User</span>
+        <br>
+        <ion-button class="logbut" [routerLink]="['/login']" expand="block" color="danger">Sign In</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

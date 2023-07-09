@@ -1,0 +1,58 @@
+<ion-menu class = "menu-background" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Content</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content > <ion-menu-toggle>
+    <ion-button  class="menu-content" color="success">Close Menu</ion-button>
+ 
+  </ion-menu-toggle></ion-content>
+ 
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+        
+      </ion-buttons>
+      <ion-title>Dashboard</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding"> 
+    <div class="top">
+      <div class="nameText">
+          <p>hi <span>Kirk</span></p>
+          <h6>Class IT-3305</h6>
+          <small>2023-2024</small>
+      </div>
+      <div class="ImageThumbnail">
+          <img src="assets\me.jpg" />
+      </div>
+    </div>
+    <div class="middleBox">
+        <div class="firstDiv">
+          <img src="assets\boy.png">
+          <p>100%</p>
+          <h6>Attendance</h6>
+        </div>
+        <div class="secondDiv">
+          <img src="assets\q.png">
+          <p>Enrolled</p>
+          <h6>Classes</h6>
+        </div>
+    </div>
+
+    <div class="bottomDiv">
+      <div class="gridDiv">
+        <div class ="box" *ngForm="let item of the menu" onclick="goToPage(menu.menu_id)"?>
+          <img src="assets\{{menu.image}}" />
+          <p>{{menu.title}}</p>
+        </div> 
+      </div>
+    </div>
+  </ion-content>
+</div>
+  
+

@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons  slot="start">
+      <ion-back-button ></ion-back-button>
+    </ion-buttons>
+    <ion-title>Log In</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <img class="logo" src="assets\images.jpeg" alt="">
+  <form [formGroup]="form">
+    <ion-item lines="full">
+      <ion-label  position="floating">Email</ion-label>
+      <ion-input class="Email" type="email" formControlName="email"  ></ion-input>
+    </ion-item>
+    <ion-label color ="danger" *ngIf="form.get('email')?.hasError('required') && form.get('email')?.touched">Email is required</ion-label>
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input name="Password" formControlName="password" type="password" ></ion-input>
+    </ion-item>
+    <ion-label color ="danger" *ngIf="form.get('password')?.hasError('required') && form.get('password')?.touched">Password is required</ion-label>
+    <ion-row>
+      <ion-col>
+        <ion-button  class="login" type="submit" color="danger" expand="block" [disabled]="form.valid" [routerLink]="['/dashboard']"  (click)="login()" color="success shade">Log In</ion-button>
+        <a [routerLink]="['/forgot-password']" class="small-text">Forgot Password?</a>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
