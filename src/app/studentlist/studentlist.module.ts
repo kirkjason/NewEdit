@@ -13,8 +13,12 @@ import { StudentlistPage } from './studentlist.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    StudentlistPageRoutingModule
+    StudentlistPageRoutingModule,
   ],
-  //declarations: [StudentlistPage]
+  declarations: [StudentlistPage],
 })
 export class StudentlistPageModule {}
+
+
+
+

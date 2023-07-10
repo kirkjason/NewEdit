@@ -1,19 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { IonicModule } from '@ionic/angular';
-import {PopoverController} from '@ionic/angular';
+import { Router } from '@angular/router';
+import { PopoverController} from '@ionic/angular';
 import { PopupPage } from '../popup/popup.page';
+
 @Component({
   selector: 'app-studentlist',
- // templateUrl: './studentlist.page.html',
+  templateUrl: './studentlist.page.html',
   styleUrls: ['./studentlist.page.scss'],
-  standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule]
+  standalone: false,
 })
 export class StudentlistPage implements OnInit {
 
-  constructor(public popoverController: PopoverController) { }
+  constructor(private router: Router, public popoverController: PopoverController) { }
 
   ngOnInit() {
   }
@@ -27,8 +25,9 @@ export class StudentlistPage implements OnInit {
 
     await popover.present();
     const { role } = await popover.onDidDismiss();
-
-
+  }
+  goBack(){
+    this.router.navigate(['dashboard']);
   }
     
 }

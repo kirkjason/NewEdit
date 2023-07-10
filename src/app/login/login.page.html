@@ -21,7 +21,7 @@
     <ion-label color ="danger" *ngIf="form.get('password')?.hasError('required') && form.get('password')?.touched">Password is required</ion-label>
     <ion-row>
       <ion-col>
-        <ion-button  class="login" type="submit" color="danger" expand="block" [disabled]="form.valid" [routerLink]="['/dashboard']"  (click)="login()" color="success shade">Log In</ion-button>
+        <ion-button  class="login" type="submit" color="danger" expand="block" [disabled]="form.valid" [routerLink]="['/studentlist']"  (click)="login()" color="success shade">Log In</ion-button>
         <a [routerLink]="['/forgot-password']" class="small-text">Forgot Password?</a>
       </ion-col>
     </ion-row>
